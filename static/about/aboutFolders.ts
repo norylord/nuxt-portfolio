@@ -69,7 +69,10 @@ export default {
                     id: 6,
                     title: 'university',
                     type: 'text',
-                    description: '    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam beatae dolores eligendi esse harum inventore possimus sint! Asperiores illum in maiores molestias nisi nostrum quidem quos rem reprehenderit ut!\n'
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. \n' +
+                        'Ab aliquam beatae dolores eligendi esse harum inventore possimus sint! \n' +
+                        'Asperiores illum in maiores molestias nisi nostrum quidem quos rem reprehenderit' +
+                        'ut!\n'
 
                 }
             ]

@@ -38,7 +38,6 @@ const selectFile = (file) => {
 };
 
 const closeFile = (file) => {
-  console.log(file)
   if (state.activeFile) {
     file.id === state.activeFile.id ? state.activeFile = undefined : null
   }

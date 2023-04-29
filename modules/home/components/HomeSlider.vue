@@ -1,44 +1,42 @@
 <template>
-  <keep-alive>
-    <div ref="container" class="keen-slider">
-      <div
-          class="keen-slider__slide number-slide1"
-          :class="{ 'slide-active': current === 1 }"
-      >
-        1
-      </div>
-      <div
-          class="keen-slider__slide number-slide2"
-          :class="{ 'slide-active': current === 2 }"
-      >
-        2
-      </div>
-      <div
-          class="keen-slider__slide number-slide3"
-          :class="{ 'slide-active': current === 3 }"
-      >
-        3
-      </div>
-      <div
-          class="keen-slider__slide number-slide4"
-          :class="{ 'slide-active': current === 4 }"
-      >
-        4
-      </div>
-      <div
-          class="keen-slider__slide number-slide5"
-          :class="{ 'slide-active': current === 5 }"
-      >
-        5
-      </div>
-      <div
-          class="keen-slider__slide number-slide6"
-          :class="{ 'slide-active': current === 6 }"
-      >
-        6
-      </div>
+  <div ref="container" class="keen-slider">
+    <div
+        class="keen-slider__slide number-slide1"
+        :class="{ 'slide-active': current === 1 }"
+    >
+      1
     </div>
-  </keep-alive>
+    <div
+        class="keen-slider__slide number-slide2"
+        :class="{ 'slide-active': current === 2 }"
+    >
+      2
+    </div>
+    <div
+        class="keen-slider__slide number-slide3"
+        :class="{ 'slide-active': current === 3 }"
+    >
+      3
+    </div>
+    <div
+        class="keen-slider__slide number-slide4"
+        :class="{ 'slide-active': current === 4 }"
+    >
+      4
+    </div>
+    <div
+        class="keen-slider__slide number-slide5"
+        :class="{ 'slide-active': current === 5 }"
+    >
+      5
+    </div>
+    <div
+        class="keen-slider__slide number-slide6"
+        :class="{ 'slide-active': current === 6 }"
+    >
+      6
+    </div>
+  </div>
 </template>
 
 <script setup>

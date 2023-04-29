@@ -10,11 +10,12 @@
         const githubLink = “https://github.com/Norylord”
       </p>
     </div>
+
     <div class="home__slider">
-      <keep-alive>
-        <HomeSlider/>
-      </keep-alive>
+
+      <HomeSlider/>
     </div>
+
   </section>
 </template>
 

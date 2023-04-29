@@ -1,6 +1,5 @@
 <template>
   <section class="code-snippets">
-    {{ activeFiles }}
   </section>
 </template>
 
