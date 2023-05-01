@@ -15,9 +15,10 @@
 
       <HomeSlider/>
     </div>
-    <img class="home__blurred-img blurred-blue" src="@/assets/img/Blue.svg" alt="">
-    <img class="home__blurred-img blurred-green" src="@/assets/img/Green.svg" alt="">
+
   </section>
+  <img class="home__blurred-img blurred-blue" src="@/assets/img/Blue.svg" alt="">
+  <img class="home__blurred-img blurred-green" src="@/assets/img/Green.svg" alt="">
 </template>
 
 <script lang="ts" setup>
