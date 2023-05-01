@@ -64,4 +64,8 @@ const props = defineProps<IProps>()
 
 .collapse
   max-height: 900px
+
+@media (max-width: 768px)
+  .accordion__title
+    border-top: none
 </style>

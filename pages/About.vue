@@ -51,4 +51,10 @@ const closeFile = (file) => {
   width: 100%
   height: 100%
   display: flex
+  flex-direction: row
+
+@media (max-width: 768px)
+  .about
+    flex-direction: column
+    overflow-y: auto
 </style>

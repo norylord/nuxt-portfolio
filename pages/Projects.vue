@@ -43,4 +43,10 @@ const filteredProjects = computed(() => {
   display: flex
   width: 100%
   height: calc(100% - 111px)
+
+@media (max-width: 768px)
+  .projects
+    flex-direction: column
+    overflow-y: auto
+    height: 100%
 </style>

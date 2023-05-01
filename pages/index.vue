@@ -4,13 +4,13 @@
       <h2 class="home__desc-subtitle">Hi all. I am</h2>
       <h1 class="home__desc-title">Alexandr Pletnev</h1>
       <p class="home__desc-info">> Front-end developer</p>
-
       <p class="home__desc-comment">// you can also see it on my Github page</p>
       <p class="home__desc-link">
         const githubLink = “https://github.com/Norylord”
       </p>
     </div>
-
+    <img class="home__blurred-img blurred-blue" src="@/assets/img/Blue.svg" alt="">
+    <img class="home__blurred-img blurred-green" src="@/assets/img/Green.svg" alt="">
     <div class="home__slider">
 
       <HomeSlider/>
@@ -32,6 +32,8 @@ import HomeSlider from "@/modules/home/components/HomeSlider.vue";
   justify-content: space-around
   align-items: center
   padding: 0 32px
+  z-index: 10
+
 
   &__slider
     flex: 1
@@ -70,6 +72,7 @@ import HomeSlider from "@/modules/home/components/HomeSlider.vue";
 
   &__desc
     flex: 1
+    z-index: 10
 
     &-title
       font-size: 62px
@@ -92,4 +95,27 @@ import HomeSlider from "@/modules/home/components/HomeSlider.vue";
     &-link
       color: $text-link
       font-weight: 400
+
+  &__blurred-img
+    display: none
+    position: absolute
+    z-index: -1
+
+
+.blurred
+  &-blue
+    top: 200px
+
+  &-green
+    top: 40px
+
+@media (max-width: 768px)
+  .home
+    height: 100%
+
+    &__slider
+      display: none
+
+    &__blurred-img
+      display: block
 </style>

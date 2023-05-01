@@ -23,16 +23,18 @@ const props = defineProps<IProps>()
   flex: 1
   justify-content: center
   gap: 32px
-  padding: 32px
+  padding: 28px
   overflow-y: auto
   grid-template-columns: repeat(auto-fill, 300px)
   grid-template-rows: repeat(auto-fill, 300px)
-  //display: flex
-  //flex-wrap: wrap
-  //align-items: flex-start
-  //overflow-y: auto
-  //gap: 32px
-  //padding: 64px
-  //width: 100%
-  //align-items: flex-start
+//display: flex
+//flex-wrap: wrap
+//align-items: flex-start
+//overflow-y: auto
+//gap: 32px
+//padding: 64px
+//width: 100%
+//align-items: flex-start
+
+
 </style>

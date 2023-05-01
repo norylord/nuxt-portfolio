@@ -36,6 +36,7 @@ const props = defineProps<IProps>()
 const state = reactive({
   folders: aboutFolders.folders
 })
+
 </script>
 
 <style lang='sass'>
@@ -62,5 +63,8 @@ const state = reactive({
         width: 12px
         margin-right: 8px
 
-
+@media (max-width: 768px)
+  .about-explorer
+    height: auto
+    width: 100%
 </style>

@@ -48,30 +48,35 @@ let lineCount = function () {
   display: flex
   flex-direction: column
   align-items: flex-start
+  max-width: 40%
   flex: 1
+  border-right: 1px solid #1E2D3D
 
   &__files
     display: flex
     overflow-x: auto
     width: 100%
 
-
     &-file
       font-size: 16px
       padding: 12px 24px
       color: $text-lightgray
       border-right: 1px solid #1E2D3D
-      flex: 1
       border-bottom: 1px solid #1E2D3D
       display: flex
+      gap: 8px
+      align-items: center
       justify-content: space-between
       transition: .2s ease-in-out all
+      white-space: nowrap
 
   &__body
     height: 100%
     width: 100%
+
     flex: 1
     display: flex
+    overflow-y: auto
 
     &-lines
       border-right: 1px solid #1E2D3D
@@ -91,7 +96,7 @@ let lineCount = function () {
     resize: none
     color: $text-lightgray
     font-size: 18px
-    border-right: 1px solid #1E2D3D
+
 
 .file-file
   &__close-icon
@@ -105,4 +110,13 @@ let lineCount = function () {
 .active-tab
   color: #eeeeee !important
   border-bottom: 1px solid #FEA55F !important
+
+@media (max-width: 768px)
+  .file-preview
+    max-width: 100%
+    min-height: 100vh
+
+    &__body
+      &-lines
+        display: none
 </style>

@@ -1,5 +1,6 @@
 <template>
   <section class="code-snippets">
+    <h1>Code Snippets</h1>
   </section>
 </template>
 
@@ -18,6 +19,12 @@ const props = defineProps<IProps>()
 .code-snippets
   height: 100%
   display: flex
+  justify-content: center
+  align-items: flex-start
   flex: 1
 
+@media (max-width: 768px)
+  .code-snippets
+    display: flex
+    min-height: 60vh
 </style>

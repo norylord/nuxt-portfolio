@@ -1,31 +1,31 @@
 <template>
   <div class="actions">
     <img
-      :class="{ 'active-action': activeTab === 'professional' }"
-      class="actions__icon"
-      src="@/assets/icons/professional-info-icon.svg"
-      alt=""
-      @click="changeAction('professional')"
+        :class="{ 'active-action': activeTab === 'professional' }"
+        class="actions__icon"
+        src="@/assets/icons/professional-info-icon.svg"
+        alt=""
+        @click="changeAction('professional')"
     />
     <img
-      :class="{ 'active-action': activeTab === 'personal' }"
-      class="actions__icon"
-      src="@/assets/icons/personal-info-icon.svg"
-      alt=""
-      @click="changeAction('personal')"
+        :class="{ 'active-action': activeTab === 'personal' }"
+        class="actions__icon"
+        src="@/assets/icons/personal-info-icon.svg"
+        alt=""
+        @click="changeAction('personal')"
     />
     <img
-      :class="{ 'active-action': activeTab === 'hobbies' }"
-      class="actions__icon"
-      src="@/assets/icons/hobbies-icon.svg"
-      alt=""
-      @click="changeAction('hobbies')"
+        :class="{ 'active-action': activeTab === 'hobbies' }"
+        class="actions__icon"
+        src="@/assets/icons/hobbies-icon.svg"
+        alt=""
+        @click="changeAction('hobbies')"
     />
   </div>
 </template>
 
 <script lang="ts" setup>
-import { defineEmits, defineProps } from "vue";
+import {defineEmits, defineProps} from "vue";
 
 interface IProps {
   activeTab: "professional" | "personal" | "hobbies";
@@ -56,4 +56,8 @@ const changeAction = (value?: string) => {
 
 .active-action
   opacity: 1
+
+@media (max-width: 768px)
+  .actions
+    display: none
 </style>

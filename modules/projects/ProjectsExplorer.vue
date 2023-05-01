@@ -57,4 +57,11 @@ const emit = defineEmits(['set-framework'])
 
     &-icon
       margin-left: 8px
+
+@media (max-width: 768px)
+  .projects-explorer
+    max-width: 100%
+    height: auto
+    padding-bottom: 16px
+    flex: 0
 </style>

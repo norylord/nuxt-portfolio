@@ -20,13 +20,17 @@
   display: flex
   width: 100%
   justify-content: space-between
+  z-index: 10
+
   &__section
     display: flex
     border-top: 1px solid #1e2d3d
+
     &:nth-child(2)
       flex: 1
       border-left: 1px solid #1e2d3d
       border-right: 1px solid #1e2d3d
+
     &-item
       color: $text-lightgray
       padding: 16px 32px
@@ -35,20 +39,50 @@
     flex: 1
     text-align: left
     cursor: default
+
   &-contact
     flex: 1
     text-align: left
+
   &-link
     cursor: pointer
     transition: .3s
+
     &:hover
       background: #1e2d3d
+
     &:nth-child(2)
       border-left: 1px solid #1e2d3d
       border-right: 1px solid #1e2d3d
+
     &:nth-child(3)
       border-right: 1px solid #1e2d3d
+
 .active
   color: $text-default
   border-bottom: 2px solid #FEA55F
+
+@media (max-width: 768px)
+  .footer
+
+    &__section
+      &-item
+        flex: 1
+        justify-content: center
+        text-align: center
+
+      &:first-child
+        display: none
+
+
+      &:nth-child(2)
+        flex: 2
+        border-left: none
+        border-right: none
+
+      &:last-child
+        flex: 1
+
+      &-item
+        padding: 8px
 </style>
