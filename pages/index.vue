@@ -17,8 +17,11 @@
     </div>
 
   </section>
-  <img class="home__blurred-img blurred-blue" src="@/assets/img/Blue.svg" alt="">
-  <img class="home__blurred-img blurred-green" src="@/assets/img/Green.svg" alt="">
+  <div class="blurred">
+    <img class="home__blurred-img blurred-blue" src="@/assets/img/Blue.svg" alt="">
+    <img class="home__blurred-img blurred-green" src="@/assets/img/Green.svg" alt="">
+  </div>
+
 </template>
 
 <script lang="ts" setup>
@@ -35,6 +38,7 @@ import HomeSlider from "@/modules/home/components/HomeSlider.vue";
   align-items: center
   padding: 0 32px
   z-index: 10
+  position: relative
 
 
   &__slider
@@ -105,11 +109,27 @@ import HomeSlider from "@/modules/home/components/HomeSlider.vue";
 
 
 .blurred
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  width: 100%
+  height: 100px
+  z-index: -1
+
   &-blue
     top: 200px
+    left: 0
+    bottom: 0
+    right: 120px
+    width: 100%
 
   &-green
-    top: 40px
+    top: 0
+    left: 0
+    right: 0
+    width: 100%
 
 @media (max-width: 768px)
   .home

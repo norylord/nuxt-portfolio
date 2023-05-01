@@ -63,7 +63,6 @@ watch(() => props.formData, () => {
 const countLines = () => {
   linesCount.value = []
   const divHeight = document.getElementById('content').offsetHeight
-  console.log(divHeight)
   for (let i = 1; i <= divHeight / 20 + 1; i++) {
     linesCount.value.push(i)
   }
