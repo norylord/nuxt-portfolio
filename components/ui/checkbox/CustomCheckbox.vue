@@ -1,6 +1,7 @@
 <template>
   <div>
     <label
+        class="checkbox-label"
     >
       <input
           @input="onInput"
@@ -74,12 +75,13 @@ const onInput = (event: any) => {
 .checkbox
   margin-top: 8px
   display: flex
+  cursor: pointer
 
   &-label
     font-size: 15px
     color: #0E0829
     line-height: 24px
-    margin-left: 8px
+    cursor: pointer
 
   &-body
     display: flex
