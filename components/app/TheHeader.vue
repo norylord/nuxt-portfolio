@@ -144,7 +144,7 @@ const opened = ref(false)
       margin-top: 32px
       border: 1px none #1E2D3D
       border-bottom-style: solid
-      border-radius: 0 0 12px 12px
+      border-radius: 0 0 20px 20px
       overflow: hidden
       display: flex
       flex-direction: column
@@ -166,7 +166,7 @@ const opened = ref(false)
         border-left: none !important
 
 .nav-open
-  max-height: 90vh !important
+  max-height: calc(100vh - 89px) !important
   height: 100vh
   opacity: 1
   justify-content: flex-start

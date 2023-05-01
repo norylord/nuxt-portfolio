@@ -4,17 +4,17 @@
       <div class="footer__section-item footer-title">find me in</div>
     </div>
     <div class="footer__section">
-      <a href="https://t.me/norylord" target="_blank">
-        <div class="footer__section-item footer-link">_telegram</div>
+      <a href="https://t.me/norylord" target="_blank" class="footer__section-item footer-link">
+        _telegram
       </a>
-      <a href="https://vk.com/norylord" target="_blank">
-        <div class="footer__section-item footer-link">_vk</div>
+      <a href="https://vk.com/norylord" target="_blank" class="footer__section-item footer-link">
+        _vk
       </a>
 
     </div>
     <div class="footer__section">
-      <a href="https://github.com/norylord">
-        <div class="footer__section-item footer-contact footer-link">_github</div>
+      <a href="https://github.com/norylord" class="footer__section-item footer-contact footer-link">
+        _github
       </a>
 
     </div>

@@ -6,7 +6,8 @@
       <p class="home__desc-info">> Front-end developer</p>
       <p class="home__desc-comment">// you can also see it on my Github page</p>
       <p class="home__desc-link">
-        const githubLink = “https://github.com/Norylord”
+
+        const githubLink = <a class="home__desc-link" href='https://github.com/norylord' target="_blank">“https://github.com/Norylord”</a>
       </p>
     </div>
 
