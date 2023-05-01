@@ -33,7 +33,7 @@ interface IProps {
 
 const props = defineProps<IProps>()
 const imgPath = computed(() => {
-  return 'url("/_nuxt/modules/projects/assets/img/' + (props.project.imgName ? props.project.imgName : 'vue.png') + '")'
+  return 'url("@/modules/projects/assets/img/' + (props.project.imgName ? props.project.imgName : 'vue.png') + '")'
 })
 </script>
 
