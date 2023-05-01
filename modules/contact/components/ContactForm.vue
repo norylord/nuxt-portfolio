@@ -15,12 +15,11 @@
 </template>
 
 <script lang="ts" setup>
-
-
 import CustomButton from "~/components/ui/button/CustomButton.vue";
 import CustomTextarea from "~/components/ui/textarea/CustomTextarea.vue";
 import CustomInput from "~/components/ui/input/CustomInput.vue";
 import {reactive, watch, ref} from "vue";
+
 
 interface IProps {
 }

@@ -7,10 +7,10 @@
 </template>
 
 <script lang="ts" setup>
-import ContactExplorer from "~/modules/contact/ContactExplorer.vue";
-import ContactForm from "~/modules/contact/ContactForm.vue";
+import ContactExplorer from "~/modules/contact/components/ContactExplorer.vue";
+import ContactForm from "~/modules/contact/components/ContactForm.vue";
 import {computed, onMounted, reactive, ref, watch} from "vue";
-import ContactReview from "~/modules/contact/ContactReview.vue";
+import ContactReview from "~/modules/contact/components/ContactReview.vue";
 
 const date = new Date()
 
