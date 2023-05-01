@@ -2,13 +2,13 @@
   <div class="projects-explorer">
     <CustomAccordion title="projects" class="projects-explorer__accordion">
       <div class="projects-explorer__accordion-wrapper">
-        <div class="projects-explorer__item" @click="emit('set-framework','vue')">
-          <CustomCheckbox @click.stop value="vue" v-model="props.frameworks"/>
+        <div class="projects-explorer__item" @click.stop="emit('set-framework','vue')">
+          <CustomCheckbox disabled value="vue" v-model="props.frameworks"/>
           <img class="projects-explorer__item-icon" src="@/modules/projects/icons/vue.svg" alt="">
           Vue
         </div>
-        <div class="projects-explorer__item" @click="emit('set-framework','react')">
-          <CustomCheckbox @click.stop value="react" v-model="props.frameworks"/>
+        <div class="projects-explorer__item" @click.stop="emit('set-framework','react')">
+          <CustomCheckbox disabled value="react" v-model="props.frameworks"/>
           <img class="projects-explorer__item-icon" src="@/modules/projects/icons/react.svg" alt="">
           React
         </div>

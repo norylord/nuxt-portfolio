@@ -1,10 +1,6 @@
 <template>
   <div>
     <label
-        class="select-none group inline-flex items-center cursor-pointer"
-        :class="{
-        'opacity-60': disabled,
-      }"
     >
       <input
           @input="onInput"
@@ -46,7 +42,7 @@ interface Props {
 
 const props = defineProps<Props>();
 
-const emit = defineEmits(['update:modelValue']);
+const emit = defineEmits(['check']);
 
 const trueValue = ref(typeof props.trueValue === 'undefined' ? true : props.trueValue);
 const falseValue = ref(typeof props.falseValue === 'undefined' ? false : props.falseValue);
@@ -65,17 +61,13 @@ const isChecked = computed(() => {
 const onInput = (event: any) => {
   if (props.modelValue instanceof Array) {
     if (event.target.checked) {
-      emit('update:modelValue', [...props.modelValue, props.value]);
-    } else {
-      emit(
-          'update:modelValue',
-          props.modelValue.filter((o) => o !== props.value)
-      );
+      emit('check', props.value);
     }
   } else {
     emit('update:modelValue', event.target.checked ? trueValue.value : falseValue.value);
   }
 };
+
 </script>
 <style lang="sass">
 @import "@/assets/variables/_colors.sass"
