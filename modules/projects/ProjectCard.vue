@@ -11,9 +11,12 @@
       <div class="project-card__img"/>
       <div class="project-card__body">
         <p class="project-card__desc">{{ project.description }}</p>
-        <CustomButton>
-          view-project
-        </CustomButton>
+        <a :href="project.gitURL" target="_blank">
+          <CustomButton>
+            view-project
+          </CustomButton>
+        </a>
+
       </div>
     </div>
   </div>

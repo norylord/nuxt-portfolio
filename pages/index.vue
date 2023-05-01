@@ -112,6 +112,12 @@ import HomeSlider from "@/modules/home/components/HomeSlider.vue";
 @media (max-width: 768px)
   .home
     height: 100%
+    padding: 0
+    justify-content: center
+    align-items: center
+
+    &__desc
+      padding: 32px
 
     &__slider
       display: none
