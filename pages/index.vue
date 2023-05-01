@@ -15,12 +15,12 @@
 
       <HomeSlider/>
     </div>
-
+    <div class="blurred">
+      <img class="home__blurred-img blurred-blue" src="@/assets/img/Blue.svg" alt="">
+      <img class="home__blurred-img blurred-green" src="@/assets/img/Green.svg" alt="">
+    </div>
   </section>
-  <div class="blurred">
-    <img class="home__blurred-img blurred-blue" src="@/assets/img/Blue.svg" alt="">
-    <img class="home__blurred-img blurred-green" src="@/assets/img/Green.svg" alt="">
-  </div>
+
 
 </template>
 
@@ -109,6 +109,7 @@ import HomeSlider from "@/modules/home/components/HomeSlider.vue";
 
 
 .blurred
+  display: none
   position: absolute
   top: 0
   bottom: 0
@@ -146,4 +147,6 @@ import HomeSlider from "@/modules/home/components/HomeSlider.vue";
 
     &__blurred-img
       display: block
+  .blurred
+    display: block
 </style>
