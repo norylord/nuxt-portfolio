@@ -47,6 +47,7 @@ import HomeSlider from "@/modules/home/components/HomeSlider.vue";
     display: flex
     //height: 100%
     height: 500px
+    max-width: 600px
     //box-shadow: 0px 99px 20px -63px rgb(1, 22, 39) inset, 0px -99px 20px -63px rgb(1, 22, 39) inset
     position: relative
 

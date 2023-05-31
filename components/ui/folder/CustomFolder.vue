@@ -7,7 +7,7 @@
     <div class="folder__body" :class="{'folder__open' : isOpen}">
       <div class="folder__body-file folder__file" v-for="file in files" :key="file.id"
 
-           @dblclick.prevent="() => emit('selectFile', file)">
+           @click.prevent="() => emit('selectFile', file)">
         <img src="@/assets/icons/markdown.svg" class="folder__file-icon" alt="">
         <p class="folder__file-title"
            :class="{'active-file': JSON.stringify(props.activeFile) === JSON.stringify(file)}">{{ file.title }}</p>

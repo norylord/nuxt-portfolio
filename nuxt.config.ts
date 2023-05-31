@@ -2,6 +2,7 @@
 
 export default defineNuxtConfig({
     // @ts-ignore
+    modules: ['nuxt-swiper'],
     app: {
         head: {
             charset: "utf-8",

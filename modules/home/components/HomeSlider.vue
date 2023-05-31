@@ -1,126 +1,83 @@
 <template>
-  <div ref="container" class="keen-slider">
-    <div
-        class="keen-slider__slide number-slide1"
-        :class="{ 'slide-active': current === 1 }"
-    >
-      1
-    </div>
-    <div
-        class="keen-slider__slide number-slide2"
-        :class="{ 'slide-active': current === 2 }"
-    >
-      2
-    </div>
-    <div
-        class="keen-slider__slide number-slide3"
-        :class="{ 'slide-active': current === 3 }"
-    >
-      3
-    </div>
-    <div
-        class="keen-slider__slide number-slide4"
-        :class="{ 'slide-active': current === 4 }"
-    >
-      4
-    </div>
-    <div
-        class="keen-slider__slide number-slide5"
-        :class="{ 'slide-active': current === 5 }"
-    >
-      5
-    </div>
-    <div
-        class="keen-slider__slide number-slide6"
-        :class="{ 'slide-active': current === 6 }"
-    >
-      6
-    </div>
-  </div>
+  <swiper
+      :spaceBetween="30"
+      :centeredSlides="true"
+      :autoplay="{
+      delay: 1000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true
+    }"
+      :slides-per-view="3"
+      :direction="'vertical'"
+      :observer="true"
+      :observe-parents="true"
+      :modules="modules"
+      class="mySwiper"
+      @activeIndexChange="setActiveSlide"
+  >
+    <swiper-slide :class="{'slide-active': state.activeSlide === 0}">{{ state.activeSlide }}</swiper-slide>
+    <swiper-slide :class="{'slide-active': state.activeSlide === 1}">{{ state.activeSlide }}</swiper-slide>
+    <swiper-slide :class="{'slide-active': state.activeSlide === 2}">{{ state.activeSlide }}</swiper-slide>
+    <swiper-slide :class="{'slide-active': state.activeSlide === 3}">{{ state.activeSlide }}</swiper-slide>
+    <swiper-slide :class="{'slide-active': state.activeSlide === 4}">{{ state.activeSlide }}</swiper-slide>
+    <swiper-slide :class="{'slide-active': state.activeSlide === 5}">{{ state.activeSlide }}</swiper-slide>
+    <swiper-slide :class="{'slide-active': state.activeSlide === 6}">{{ state.activeSlide }}</swiper-slide>
+    <swiper-slide :class="{'slide-active': state.activeSlide === 7}">{{ state.activeSlide }}</swiper-slide>
+    <swiper-slide :class="{'slide-active': state.activeSlide === 8}">{{ state.activeSlide }}</swiper-slide>
+
+
+  </swiper>
 </template>
+<script setup lang="ts">
+import {Swiper, SwiperSlide, useSwiper} from 'swiper/vue';
+import {Autoplay, Pagination, Navigation} from 'swiper';
+import {onMounted, reactive, ref, watch} from "vue";
+import 'swiper/css';
 
-<script setup>
-import {useKeenSlider} from "keen-slider/vue.es";
-import "keen-slider/keen-slider.min.css";
-import {ref} from "vue";
+interface IState {
+  activeSlide: number
+}
 
-const current = ref(1);
-const [container] = useKeenSlider(
-    {
-      loop: true,
-      slides: {
-        origin: "center",
-        perView: 3,
-        spacing: 24,
-      },
-      renderMode: 'performance',
-      vertical: true,
-      slideChanged: (s) => {
-        current.value = s.track.details.rel + 1;
-      },
-    },
-    [
-      (slider) => {
-        let timeout;
-        let mouseOver = false;
+const state = reactive<IState>({
+  activeSlide: 2
+})
 
-        function clearNextTimeout() {
-          clearTimeout(timeout);
-        }
 
-        function nextTimeout() {
-          clearTimeout(timeout);
-          if (mouseOver) return;
-          timeout = setTimeout(() => {
-            slider.next();
-          }, 2000);
-        }
+const setActiveSlide = (v) => {
+  state.activeSlide = v.realIndex
+}
+const modules = [Autoplay]
 
-        slider.on("created", () => {
-          slider.container.addEventListener("mouseover", () => {
-            mouseOver = true;
-            clearNextTimeout();
-          });
-          slider.container.addEventListener("mouseout", () => {
-            mouseOver = false;
-            nextTimeout();
-          });
-          nextTimeout();
-        });
-        slider.on("dragStarted", clearNextTimeout);
-        slider.on("animationEnded", nextTimeout);
-        slider.on("updated", nextTimeout);
-      },
-    ]
-);
+
 </script>
 
-<style>
-.keen-slider {
-  z-index: 1;
-  height: 100%;
-}
+<style lang="sass">
+@import "@/assets/variables/_colors.sass"
+.swiper-wrapper
+  max-height: 500px
+  width: 100%
 
-[class^="number-slide"],
-[class*=" number-slide"] {
-  background: #011221;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 50px;
-  color: #fff;
-  font-weight: 500;
-  height: 150px;
-  min-height: 150px !important;
-  max-height: 150px !important;
-  border-radius: 16px;
-  opacity: 0.4;
-  transition: opacity 0.2s ease-in-out;
-  filter: blur(6px);
-}
 
-.slide-active {
-  opacity: 1;
-  filter: none;
-}
+.swiper
+  margin: 0 !important
+  width: 100%
+
+
+.swiper-slide
+  background: #011221
+  display: flex
+  align-items: center
+  justify-content: center
+  font-size: 50px
+  color: #fff
+  font-weight: 500
+  border-radius: 16px
+  opacity: 0.4
+  transition: opacity 0.2s ease-in-out
+  filter: blur(6px)
+
+.slide-active
+  opacity: 1 !important
+  filter: none !important
+
 </style>

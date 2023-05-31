@@ -9,45 +9,38 @@
         <div class="nav__section-item nav-title">norylord</div>
       </div>
       <div class="nav__section">
-        <div
+        <NuxtLink
             class="nav__section-item nav-link"
-            :class="{ active: router.currentRoute.value.path === '/' }"
-            @click="() => {
-              opened = false
-              router.push('/')
-            }"
+            :class="{ 'nav-link--active': router.currentRoute.value.path === '/' }"
+            :to="pageHandler()"
+
         >
           _hello
-        </div>
-        <div
+        </NuxtLink>
+        <NuxtLink
             class="nav__section-item nav-link"
-            :class="{ active: router.currentRoute.value.path === '/about' }"
-            @click="() => {
-              opened = false
-              router.push('/about')
-            }"
+            :class="{ 'nav-link--active': router.currentRoute.value.path === '/about' }"
+            :to="pageHandler('about')"
+
         >
           _about-me
-        </div>
-        <div
+        </NuxtLink>
+        <NuxtLink
             class="nav__section-item nav-link"
-            :class="{ active: router.currentRoute.value.path === '/projects' }"
-            @click="() => {
-              opened = false
-              router.push('/projects')
-            }"
+            :class="{ 'nav-link--active': router.currentRoute.value.path === '/projects' }"
+            :to="pageHandler('projects')"
         >
           _projects
-        </div>
+        </NuxtLink>
       </div>
       <div class="nav__section">
-        <div class="nav__section-item nav-contact nav-link"
-             :class="{ active: router.currentRoute.value.path === '/contact' }"
-             @click="() => {
-              opened = false
-              router.push('/contact')
-            }"> _contact-me
-        </div>
+        <NuxtLink
+            class="nav__section-item nav-contact nav-link"
+            :class="{ 'nav-link--active': router.currentRoute.value.path === '/contact' }"
+            :to="pageHandler('contact')"
+        >
+          _contact-me
+        </NuxtLink>
       </div>
     </div>
   </nav>
@@ -60,6 +53,11 @@ import {ref} from "vue";
 const router = useRouter();
 
 const opened = ref(false)
+
+const pageHandler = (page = '') => {
+  opened.value = false
+  return '/' + page
+}
 </script>
 
 <style lang="sass">
@@ -108,6 +106,10 @@ const opened = ref(false)
     cursor: pointer
     transition: .3s background
 
+    &--active
+      color: $text-default
+      border-bottom: 2px solid #FEA55F
+
     &:hover
       background: #1e2d3d
 
@@ -118,9 +120,6 @@ const opened = ref(false)
     &:nth-child(3)
       border-right: 1px solid #1e2d3d
 
-.active
-  color: $text-default
-  border-bottom: 2px solid #FEA55F
 
 @media (max-width: 768px)
   .nav
