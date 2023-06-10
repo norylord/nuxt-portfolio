@@ -4,7 +4,6 @@
     <AboutExplorer @select-file="selectFile" :active-file="state.activeFile"/>
     <AboutFilePreview :active-file="state.activeFile" @close-file="closeFile" :active-files="state.activeFiles"
                       @select-file="selectFile"/>
-    <AboutCodeSnippets :active-files="state.activeFiles"/>
   </section>
 </template>
 
@@ -12,7 +11,7 @@
 import {reactive} from "vue";
 import AboutActions from "@/modules/about/components/AboutActions.vue";
 import AboutExplorer from "~/modules/about/components/AboutExplorer.vue";
-import AboutFilePreview from "~/modules/about/components/AboutFilePreview.vue";
+import AboutFilePreview from "~/modules/about/components/AboutFilePreview.client.vue";
 import AboutCodeSnippets from "~/modules/about/components/AboutCodeSnippets.vue";
 import {IFile} from "~/types/about";
 
@@ -34,7 +33,7 @@ const changeTab = (label: "professional" | "personal" | "hobbies") => {
 
 const selectFile = (file) => {
   state.activeFile = file;
-  state.activeFiles.includes(file) ? null : state.activeFiles.push(file)
+  state.activeFiles.includes(file) ? null : state.activeFiles.unshift(file)
 };
 
 const closeFile = (file) => {

@@ -47,6 +47,7 @@ const imgPath = computed(() => {
   flex-direction: column
   height: 100%
   position: relative
+  max-height: 300px
 
   &__header
     display: flex

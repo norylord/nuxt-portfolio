@@ -2,7 +2,7 @@ export const anotherContacts = [
     {
         id: 1,
         title: 'discord channel',
-        link: 'https://discord.com'
+        link: 'https://discordapp.com/users/219882322873286676'
     },
     {
         id: 2,
@@ -17,7 +17,7 @@ export const anotherContacts = [
     {
         id: 4,
         title: 'steam profile',
-        link: 'https://steam.com'
+        link: 'https://steamcommunity.com/profiles/76561198105469088/'
     }
 ]
 
@@ -25,6 +25,7 @@ export const mainContacts = [
     {
         id: 1,
         title: 'norylord@icloud.com',
+        link: 'mailto:norylord@icloud.com'
     },
     {
         id: 2,

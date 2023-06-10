@@ -11,9 +11,10 @@
       </p>
     </div>
 
-    <div class="home__slider">
+    <div class="home__model">
 
-      <HomeSlider/>
+      <!--      <HomeSlider/>-->
+      <home-model/>
     </div>
     <div class="blurred">
       <img class="home__blurred-img blurred-blue" src="@/assets/img/Blue.svg" alt="">
@@ -25,7 +26,8 @@
 </template>
 
 <script lang="ts" setup>
-import HomeSlider from "@/modules/home/components/HomeSlider.vue";
+import HomeSlider from "~/modules/home/components/HomeSlider.client.vue";
+import HomeModel from '~/modules/home/components/HomeModel.client.vue'
 </script>
 
 <style lang="sass">
@@ -41,14 +43,12 @@ import HomeSlider from "@/modules/home/components/HomeSlider.vue";
   position: relative
 
 
-  &__slider
+  &__model
     flex: 1
     align-items: center
     display: flex
-    //height: 100%
     height: 500px
     max-width: 600px
-    //box-shadow: 0px 99px 20px -63px rgb(1, 22, 39) inset, 0px -99px 20px -63px rgb(1, 22, 39) inset
     position: relative
 
     &:after
@@ -61,7 +61,7 @@ import HomeSlider from "@/modules/home/components/HomeSlider.vue";
       background-repeat: no-repeat
       left: -100px
       top: -100px
-      z-index: 0
+      z-index: -1
       transform: rotate(30deg)
 
     &:before
@@ -74,7 +74,7 @@ import HomeSlider from "@/modules/home/components/HomeSlider.vue";
       background-repeat: no-repeat
       left: 200px
       top: 280px
-      z-index: 0
+      z-index: -1
       transform: rotate(30deg)
 
   &__desc

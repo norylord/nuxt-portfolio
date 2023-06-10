@@ -10,7 +10,7 @@
 import ContactExplorer from "~/modules/contact/components/ContactExplorer.vue";
 import ContactForm from "~/modules/contact/components/ContactForm.vue";
 import {computed, onMounted, reactive, ref, watch} from "vue";
-import ContactReview from "~/modules/contact/components/ContactReview.vue";
+import ContactReview from "~/modules/contact/components/ContactReview.client.vue";
 
 const date = new Date()
 

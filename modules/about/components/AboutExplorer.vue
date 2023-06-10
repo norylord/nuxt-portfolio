@@ -7,11 +7,14 @@
     <CustomAccordion title="contacts">
       <div class="about-explorer-contacts__item">
         <img src="~/assets/icons/mail-icon.svg" alt="">
-        norylord@icloud.com
+        <a href="mailto:norylord@icloud.com"> norylord@icloud.com
+        </a>
       </div>
       <div class="about-explorer-contacts__item">
         <img src="~/assets/icons/telegram.svg" alt="">
-        @norylord
+        <a href="https://t.me/Norylord">
+          @norylord
+        </a>
       </div>
     </CustomAccordion>
   </div>
@@ -54,10 +57,13 @@ const state = reactive({
       font-size: 14px
       font-weight: 400
       line-height: 21px
-      color: $text-lightgray
       margin: 8px 0
       cursor: pointer
       transition: color .2s ease-in-out
+
+      a
+        color: $text-lightgray
+        text-decoration: none
 
       img
         width: 12px

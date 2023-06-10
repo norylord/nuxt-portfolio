@@ -3,11 +3,13 @@
     <CustomAccordion title="contacts">
       <div class="contacts__explorer-item">
         <img src="~/assets/icons/mail-icon.svg" alt="">
-        norylord@icloud.com
+        <a href="mailto:norylord@icloud.com" target="_blank"> norylord@icloud.com
+        </a>
       </div>
       <div class="contacts__explorer-item">
         <img src="~/assets/icons/telegram.svg" alt="">
-        @norylord
+        <a href="https://t.me/Norylord" target="_blank"> @norylord
+        </a>
       </div>
     </CustomAccordion>
     <CustomAccordion title="find-me-also-in">
@@ -40,8 +42,11 @@ const props = defineProps<IProps>()
     &-item
       display: flex
       align-items: center
-      color: $text-lightgray
       margin: 4px 0
+
+      a
+        color: $text-lightgray
+
 
       img
         width: 16px

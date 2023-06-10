@@ -21,7 +21,7 @@ const props = defineProps<IProps>()
 
 const state = reactive({
   projects: projectsList,
-  frameworks: []
+  frameworks: ['vue', 'react']
 })
 
 const setFramework = (framework) => {
@@ -29,7 +29,6 @@ const setFramework = (framework) => {
 }
 
 const filteredProjects = computed(() => {
-  if (state.frameworks.length === 0) return state.projects
   return state.projects.filter(project => {
     return state.frameworks.includes(project.framework)
   })
