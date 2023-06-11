@@ -42,6 +42,9 @@ const emit = defineEmits(['set-framework'])
   height: 100%
 
   &__accordion
+    .accordion__title
+      border-top: none
+
     &-wrapper
       margin-top: 8px
       display: flex

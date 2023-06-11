@@ -62,7 +62,7 @@ const getLinesCount = () => {
 }
 
 onUnmounted(() => {
-  resizeObserver.disconnect()
+  if (resizeObserver) resizeObserver.disconnect()
 })
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="contacts__explorer">
-    <CustomAccordion title="contacts">
+    <CustomAccordion title="contacts" class="contacts__explorer-accordion">
       <div class="contacts__explorer-item">
         <img src="~/assets/icons/mail-icon.svg" alt="">
         <a href="mailto:norylord@icloud.com" target="_blank"> norylord@icloud.com
@@ -38,6 +38,10 @@ const props = defineProps<IProps>()
   &__explorer
     border-right: 1px solid #1E2D3D
     flex: 1
+
+    &-accordion
+      .accordion__title
+      border-top: none
 
     &-item
       display: flex

@@ -41,7 +41,7 @@ const filteredProjects = computed(() => {
 .projects
   display: flex
   width: 100%
-  height: calc(100% - 111px)
+  height: calc(100% - 110px)
 
 @media (max-width: 768px)
   .projects
