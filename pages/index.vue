@@ -148,6 +148,9 @@ import HomeModel from '~/modules/home/components/HomeModel.client.vue'
 
     &__blurred-img
       display: block
+
+    &__model
+      display: none
   .blurred
     display: block
 </style>

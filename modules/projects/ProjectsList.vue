@@ -27,7 +27,7 @@ const props = defineProps<IProps>()
   padding: 28px
   overflow-y: auto
   grid-template-columns: repeat(auto-fill, 300px)
-  grid-template-rows: repeat(auto-fill, 300px)
+  grid-template-rows: repeat(auto-fill, 1fr)
 
 
 </style>

@@ -1,14 +1,14 @@
 <template>
   <div class="project-card">
     <img class="project-card__framework" v-if="project.framework === 'react'"
-         src="@/modules/projects/icons/ReactColored.svg" alt="">
-    <img class="project-card__framework" v-else src="@/modules/projects/icons/VueColored.svg" alt="">
+         src="@/modules/projects/icons/ReactColored.svg" alt="" loading="lazy">
+    <img class="project-card__framework" loading="lazy" v-else src="@/modules/projects/icons/VueColored.svg" alt="">
     <div class="project-card__header">
       <h1 class="project-card__title">Project {{ props.index }}</h1>
       <p class="project-card__name">// _{{ project.title }}</p>
     </div>
     <div class="project-card__main">
-      <div class="project-card__img"/>
+      <img class="project-card__img" :src="project.imgURL" alt="project-logo" loading="lazy">
       <div class="project-card__body">
         <p class="project-card__desc">{{ project.description }}</p>
         <a :href="project.gitURL" target="_blank">
@@ -42,12 +42,10 @@ const imgPath = computed(() => {
 
 <style lang='sass'>
 .project-card
-  margin-top: 16px
   display: flex
   flex-direction: column
   height: 100%
   position: relative
-  max-height: 300px
 
   &__header
     display: flex
@@ -72,12 +70,9 @@ const imgPath = computed(() => {
     border: 1px solid #1E2D3D
 
   &__img
+    object-fit: cover
     width: 300px
-    height: 120px
-    background-position: center
-    background-repeat: no-repeat
-    background-size: cover
-    background-image: v-bind(imgPath)
+    height: 140px
     border-radius: 16px 16px 0 0
     border-bottom: 1px solid #1E2D3D
 

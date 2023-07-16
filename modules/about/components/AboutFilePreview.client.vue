@@ -1,6 +1,6 @@
 <template>
   <client-only>
-    <section class="file-preview" v-if="activeFile">
+    <section class="file-preview" v-if="activeFile" id="file-preview">
       <div class="file-preview__files">
         <div class="file-preview__files-file file-file"
              v-for="file in activeFiles"
@@ -34,7 +34,7 @@ import {countLines} from "~/composables/lineCount";
 const emit = defineEmits(['closeFile'])
 
 interface IProps {
-  activeFile: IFile
+  activeFile: IFile | undefined
   activeFiles: IFile[]
 }
 
@@ -53,7 +53,7 @@ watch(() => props.activeFile, () => {
 onMounted(() => {
   setTimeout(() => {
     getLinesCount()
-    resizeObserver = createResizeObserver('file-preview', getLinesCount)
+    if (props.activeFile) resizeObserver = createResizeObserver('file-preview', getLinesCount)
   }, 30)
 })
 

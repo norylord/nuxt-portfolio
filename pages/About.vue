@@ -17,13 +17,13 @@ import {IFile} from "~/types/about";
 
 interface IState {
   activeTab: "professional" | "personal" | "hobbies";
-  activeFile: IFile | undefined,
+  activeFile: IFile | null,
   activeFiles: IFile[]
 }
 
 const state = reactive<IState>({
   activeTab: "professional",
-  activeFile: undefined,
+  activeFile: null,
   activeFiles: []
 });
 

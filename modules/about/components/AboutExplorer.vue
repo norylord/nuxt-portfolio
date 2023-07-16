@@ -25,11 +25,12 @@ import {computed, onBeforeMount, onMounted, reactive, ref} from 'vue'
 import CustomAccordion from "~/components/ui/accordion/CustomAccordion.vue";
 import CustomFolder from "~/components/ui/folder/CustomFolder.vue";
 import aboutFolders from "~/static/about/aboutFolders";
+import {IFile} from "~/types/about";
 
 const emit = defineEmits(['selectFile'])
 
 interface IProps {
-  activeFile: string,
+  activeFile: IFile | null,
 }
 
 const selectFile = (file) => {

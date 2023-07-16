@@ -65,6 +65,7 @@ watch(() => props.formData, () => {
 onMounted(() => {
   setTimeout(() => {
     getLinesCount()
+
     createResizeObserver('content', getLinesCount)
   }, 30)
 })
@@ -72,10 +73,6 @@ onMounted(() => {
 const getLinesCount = () => {
   linesCount.value = countLines('content')
 }
-
-onUnmounted(() => {
-
-})
 </script>
 
 <style lang='sass'>
