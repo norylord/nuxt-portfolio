@@ -6,17 +6,10 @@
 </template>
 
 <script lang="ts" setup>
-
-
 import ProjectsExplorer from "~/modules/projects/ProjectsExplorer.vue";
-import {computed, reactive} from "vue";
 import ProjectsList from "~/modules/projects/ProjectsList.vue";
-import projectsList from "~/modules/projects/static/projects";
-
-interface IProps {
-}
-
-const props = defineProps<IProps>()
+import {computed, reactive} from "vue";
+import {projectsList} from "~/modules/projects/static/projects";
 
 
 const state = reactive({
@@ -24,7 +17,7 @@ const state = reactive({
   frameworks: ['vue', 'react']
 })
 
-const setFramework = (framework) => {
+const setFramework = (framework: string) => {
   state.frameworks.includes(framework) ? state.frameworks = state.frameworks.filter((item) => item !== framework) : state.frameworks.push(framework)
 }
 
@@ -32,8 +25,6 @@ const filteredProjects = computed(() => {
   return state.projects.filter(project => {
     return state.frameworks.includes(project.framework)
   })
-
-
 })
 </script>
 

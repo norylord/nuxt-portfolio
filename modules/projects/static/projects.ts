@@ -9,7 +9,7 @@ export interface IProject {
     imgURL: string,
 }
 
-const projectsList = <IProject[]>[
+export const projectsList = <IProject[]>[
     {
         id: 1,
         title: 'rick-and-mory-ts',
@@ -91,5 +91,3 @@ const projectsList = <IProject[]>[
         imgURL: 'https://i.imgur.com/ADbvKXd.jpg'
     },
 ]
-
-export default projectsList

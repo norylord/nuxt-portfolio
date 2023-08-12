@@ -38,7 +38,7 @@ const emit = defineEmits(['set-framework'])
   flex: 1
   max-width: 300px
   width: 100%
-  border-right: #1E2D3D 1px solid
+  border-right: $primary-color 1px solid
   height: 100%
 
   &__accordion

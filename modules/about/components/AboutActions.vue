@@ -44,7 +44,7 @@ const changeAction = (value?: string) => {
   height: 100%
   display: flex
   flex-direction: column
-  border-right: 1px solid #1e2d3d
+  border-right: 1px solid $primary-color
 
   &__icon
     filter: invert(46%) sepia(51%) saturate(276%) hue-rotate(169deg) brightness(90%) contrast(83%)

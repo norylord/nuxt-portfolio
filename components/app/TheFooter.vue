@@ -10,18 +10,15 @@
       <a href="https://vk.com/norylord" target="_blank" class="footer__section-item footer-link">
         _vk
       </a>
-
-    </div>
-    <div class="footer__section">
-      <a href="https://github.com/norylord" class="footer__section-item footer-contact footer-link">
+      <a href="https://github.com/norylord" target="_blank" class="footer__section-item footer-link">
         _github
       </a>
-
     </div>
   </footer>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+</script>
 
 <style lang="sass">
 .footer
@@ -32,12 +29,11 @@
 
   &__section
     display: flex
-    border-top: 1px solid #1e2d3d
+    border-top: 1px solid $primary-color
 
     &:nth-child(2)
       flex: 1
-      border-left: 1px solid #1e2d3d
-      border-right: 1px solid #1e2d3d
+      border-left: 1px solid $primary-color
 
     &-item
       color: $text-lightgray
@@ -57,14 +53,14 @@
     transition: .3s
 
     &:hover
-      background: #1e2d3d
+      background: $primary-color
 
     &:nth-child(2)
-      border-left: 1px solid #1e2d3d
-      border-right: 1px solid #1e2d3d
+      border-left: 1px solid $primary-color
+      border-right: 1px solid $primary-color
 
     &:nth-child(3)
-      border-right: 1px solid #1e2d3d
+      border-right: 1px solid $primary-color
 
 .active
   color: $text-default

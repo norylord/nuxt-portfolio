@@ -12,8 +12,8 @@
 body
   width: 100%
   height: 100%
-  padding: 24px
   background: #010c15
+  padding: 24px
   overflow: hidden
 
 html
@@ -31,7 +31,7 @@ html
   flex-direction: column
   justify-content: space-between
   align-items: center
-  border: 1px solid #1E2D3D
+  border: 1px solid $primary-color
   position: relative
   border-radius: 20px
   background: $bg-color
@@ -42,5 +42,8 @@ a
 
 @media (max-width: 769px)
   body
-    padding: 16px
+    padding: 0
+  .wrapper
+    border-radius: 0
+    border: none
 

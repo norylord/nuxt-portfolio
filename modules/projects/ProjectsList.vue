@@ -1,5 +1,5 @@
 <template>
-  <transition-group tag="div" name="kek" class="projects-list">
+  <transition-group tag="div" name="projectsList" class="projects-list">
     <ProjectCard :id="project.id" v-for="(project, index) in projects" :key="project.id" :project="project"
                  :index="index + 1"/>
   </transition-group>
@@ -27,28 +27,28 @@ const props = defineProps<IProps>()
   padding: 28px
   overflow-y: auto
   grid-template-columns: repeat(auto-fill, 300px)
-  grid-template-rows: repeat(auto-fill, 1fr)
+  grid-template-rows: repeat(auto-fill, 340px)
 
 
 </style>
 
 <style lang="scss">
-.kek-move,
-.kek-enter-active,
-.kek-leave-active {
+.projectsList-move,
+.projectsList-enter-active,
+.projectsList-leave-active {
   transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
 }
 
 /* 2. declare enter from and leave to state */
-.kek-enter-from,
-.kek-leave-to {
+.projectsList-enter-from,
+.projectsList-leave-to {
   opacity: 0;
-  transform: scaleY(0.01) translate(30px, 0);
+  transform: scale(0.01) translate(30px, 0);
 }
 
 /* 3. ensure leaving items are taken out of layout flow so that moving
       animations can be calculated correctly. */
-.kek-leave-active {
+.projectsList-leave-active {
   opacity: 0;
   position: absolute;
 }

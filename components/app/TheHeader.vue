@@ -81,18 +81,15 @@ const openMenu = () => {
 
   &__section
     display: flex
-    border-bottom: 1px solid #1e2d3d
-
-    &-item
-      border-top: 1px solid #1E2D3D
+    border-bottom: 1px solid $primary-color
 
     &:nth-child(1)
       flex: 1
 
     &:nth-child(2)
       flex: 9
-      border-left: 1px solid #1e2d3d
-      border-right: 1px solid #1e2d3d
+      border-left: 1px solid $primary-color
+      border-right: 1px solid $primary-color
 
     &:nth-child(3)
       flex: 3
@@ -116,14 +113,14 @@ const openMenu = () => {
     transition: .3s background
 
     &:hover
-      background: #1e2d3d
+      background: $primary-color
 
     &:nth-child(2)
-      border-left: 1px solid #1e2d3d
-      border-right: 1px solid #1e2d3d
+      border-left: 1px solid $primary-color
+      border-right: 1px solid $primary-color
 
     &:nth-child(3)
-      border-right: 1px solid #1e2d3d
+      border-right: 1px solid $primary-color
 
 .nav-link--active
   color: $text-default
@@ -134,8 +131,7 @@ const openMenu = () => {
     padding: 8px
     width: 100%
     position: relative
-    border-bottom: 1px solid #1E2D3D
-
+    border-bottom: 1px solid $primary-color
     &-mobile-trigger
       display: flex
       justify-content: space-between
@@ -146,7 +142,8 @@ const openMenu = () => {
     &-wrapper
       position: absolute
       left: 0
-      background: #011627
+      background: rgba(1, 22, 39, 0.6)
+      backdrop-filter: blur(20px)
       z-index: 1000
       margin-top: 38px
       border-radius: 0 0 20px 20px
@@ -155,15 +152,14 @@ const openMenu = () => {
       flex-direction: column
       transition: max-height .3s ease-out
       height: 100vh
-      border-bottom: 1px solid #1E2D3D
       max-height: 0px
       top: 24px
       justify-content: flex-start
 
     &__section
       flex-direction: column
-      border: none
       flex: 0 !important
+      border: none !important
 
       &:first-child
         display: none
@@ -173,7 +169,7 @@ const openMenu = () => {
         border-left: none !important
 
 .nav-open
-  max-height: calc(100vh - 96px) !important
+  max-height: calc(100vh) !important
   opacity: 1
   justify-content: flex-start
   transition: max-height .3s ease-in-out, opacity .2s ease-in-out
@@ -182,7 +178,7 @@ const openMenu = () => {
     flex: 0
 
     &:last-child
-      border-bottom: 1px solid #1E2D3D
+      border-bottom: 1px solid $primary-color
 
       .nav-link--active
         color: $text-default

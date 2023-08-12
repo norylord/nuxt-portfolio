@@ -16,7 +16,7 @@
           <p class="file-preview__body-line" v-for="line in linesCount">{{ line }}</p>
         </div>
         <div class="" style="padding: 24px">
-          <div class="file-preview__description" id="file-preview" v-html="props.activeFile.description">
+          <div class="file-preview__description" id="file-preview__description" v-html="props.activeFile.description">
           </div>
         </div>
 
@@ -58,7 +58,7 @@ onMounted(() => {
 })
 
 const getLinesCount = () => {
-  linesCount.value = countLines('file-preview')
+  linesCount.value = countLines('file-preview__description')
 }
 
 onUnmounted(() => {
@@ -73,20 +73,20 @@ onUnmounted(() => {
   flex-direction: column
   align-items: flex-start
   flex: 1
-  border-right: 1px solid #1E2D3D
+  border-right: 1px solid $primary-color
 
   &__files
     display: flex
     overflow-x: auto
     width: 100%
-    border-bottom: 1px solid #1E2D3D
+    border-bottom: 1px solid $primary-color
 
 
     &-file
       font-size: 16px
       padding: 12px 24px
       color: $text-lightgray
-      border-right: 1px solid #1E2D3D
+      border-right: 1px solid $primary-color
       display: flex
       gap: 8px
       align-items: center
@@ -100,10 +100,9 @@ onUnmounted(() => {
     align-items: flex-start
     flex: 1
     display: flex
-    overflow-y: auto
 
     &-lines
-      border-right: 1px solid #1E2D3D
+      border-right: 1px solid $primary-color
       padding: 24px
       align-self: stretch
 
@@ -132,7 +131,7 @@ onUnmounted(() => {
     border-radius: 100%
 
     &:hover
-      background: #1E2D3D
+      background: $primary-color
 
 
 .active-tab
@@ -145,6 +144,7 @@ onUnmounted(() => {
     min-height: 100vh
 
     &__body
+      overflow: hidden
       &-lines
         display: none
 </style>

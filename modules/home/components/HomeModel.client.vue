@@ -76,9 +76,9 @@ onMounted(() => {
 })
 
 const loop = () => {
-  sphere.rotation.y += 0.005
-  sphere.rotation.z += 0.005
-  sphere.rotation.x += 0.005
+  sphere.rotation.y += 0.001
+  sphere.rotation.z += 0.001
+  sphere.rotation.x += 0.001
   updateRenderer()
   requestAnimationFrame(loop)
 }

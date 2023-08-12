@@ -36,12 +36,12 @@ const props = defineProps<IProps>()
 <style lang='sass'>
 .contacts
   &__explorer
-    border-right: 1px solid #1E2D3D
+    border-right: 1px solid $primary-color
     flex: 1
 
     &-accordion
       .accordion__title
-      border-top: none
+        border-top: none
 
     &-item
       display: flex

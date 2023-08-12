@@ -44,7 +44,6 @@ const imgPath = computed(() => {
 .project-card
   display: flex
   flex-direction: column
-  height: 100%
   position: relative
 
   &__header
@@ -67,14 +66,14 @@ const imgPath = computed(() => {
     border-radius: 16px
     max-width: 300px
     height: 100%
-    border: 1px solid #1E2D3D
+    border: 1px solid $primary-color
 
   &__img
     object-fit: cover
     width: 300px
     height: 140px
     border-radius: 16px 16px 0 0
-    border-bottom: 1px solid #1E2D3D
+    border-bottom: 1px solid $primary-color
 
   &__body
     display: flex

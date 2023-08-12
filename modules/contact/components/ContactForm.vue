@@ -53,7 +53,7 @@ watch(() => state,
   justify-content: center
   align-items: center
   flex-direction: column
-  border-right: 1px solid #1E2D3D
+  border-right: 1px solid $primary-color
 
   &-container
     gap: 8px

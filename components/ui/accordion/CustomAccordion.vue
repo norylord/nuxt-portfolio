@@ -30,8 +30,8 @@ const props = defineProps<IProps>()
   &__title
     font-size: 16px
     padding: 12px
-    border-bottom: 1px solid #1E2D3D
-    //border-top: 1px solid #1E2D3D
+    border-bottom: 1px solid $primary-color
+    //border-top: 1px solid $primary-color
     cursor: pointer
 
 

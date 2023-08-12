@@ -12,8 +12,6 @@
     </div>
 
     <div class="home__model">
-
-      <!--      <HomeSlider/>-->
       <home-model/>
     </div>
     <div class="blurred">

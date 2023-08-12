@@ -36,7 +36,7 @@ const onInput = (e?: any) => {
   &-input
     background: #011221
     outline: none
-    border: 1px solid #1E2D3D
+    border: 1px solid $primary-color
     padding: 10px 15px
     transition: all .2s ease-in-out
     border-radius: 8px

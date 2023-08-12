@@ -48,7 +48,7 @@ const state = reactive({
   display: flex
   flex-direction: column
   height: 100%
-  border-right: 1px solid #1E2D3D
+  border-right: 1px solid $primary-color
   width: 220px
 
   &-contacts
